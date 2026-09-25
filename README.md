@@ -5,7 +5,7 @@ color and type system, Flexbox, and CSS Grid.
 
 ## Live site
 
-https://yashwanthk26301053-wq.github.io/devfolio/
+https://yashwanthk26301053-wq.github.io/DevFolio/
 
 *(Update this link to match whatever repo name you actually deploy under.)*
 
