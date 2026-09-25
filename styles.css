@@ -1,0 +1,122 @@
+:root {
+    --ink: #16213e;
+    --ink-soft: #4a5568;
+    --paper: #faf9f6;
+    --accent: #d9a404;
+    --border: #e4e1d8;
+    --font-head: 'Space Grotesk', sans-serif;
+    --font-body: 'Inter', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--font-body);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-head);
+    color: var(--ink);
+    margin: 0 0 0.4em;
+}
+
+p {
+    color: var(--ink-soft);
+    max-width: 65ch;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+a:hover,
+a:focus {
+    text-decoration: underline;
+}
+
+/* Header: Flexbox row (name left, nav right) */
+.site-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.5rem 6%;
+    border-bottom: 1px solid var(--border);
+}
+
+.site-header h1 {
+    font-size: 1.4rem;
+}
+
+.site-header nav {
+    display: flex;
+    gap: 1.25rem;
+}
+
+main,
+footer {
+    padding: 2.5rem 6%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+section + section {
+    margin-top: 2rem;
+}
+
+/* Projects: CSS Grid, 1 column by default (mobile) */
+.project-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    margin-top: 1rem;
+}
+
+.project-card {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.25rem;
+    background: #ffffff;
+}
+
+.project-card h3 {
+    font-size: 1.1rem;
+}
+
+footer {
+    border-top: 1px solid var(--border);
+}
+
+.contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    margin-top: 0.5rem;
+}
+
+/* Responsive breakpoints: grid grows as screen widens */
+@media (min-width: 640px) {
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 960px) {
+    .project-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
